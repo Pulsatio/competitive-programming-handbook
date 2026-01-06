@@ -3,17 +3,20 @@
 Duración: 2 horas
 
 Objetivos
+
 - Entender qué es la programación competitiva y sus plataformas.
 - Conocer la estructura típica de un problema competitivo.
 - Aprender entrada/salida básica en C++ y usar una plantilla inicial.
 - Resolver ejercicios simples: Hello World y A+B.
 
 Materiales
+
 - Ordenador con compilador C++ (g++, clang++)
 - Acceso a internet para plataformas (Codeforces, AtCoder, CodeChef, LeetCode)
 - Editor de código / terminal
 
 Agenda (2h)
+
 - 00:00–00:10 — Presentación: ¿qué es programación competitiva? Plataformas y reglas.
 - 00:10–00:30 — Estructura de un problema (entrada, salida, restricciones, ejemplos).
 - 00:30–00:50 — Entrada/Salida básica: `cin`, `cout`, `endl`.
@@ -24,6 +27,7 @@ Agenda (2h)
 Ejemplos de código
 
 Hello World
+
 ```cpp
 // ejemplo: Hello World
 #include <bits/stdc++.h>
@@ -35,6 +39,7 @@ int main() {
 ```
 
 A + B (entrada: dos enteros en una línea)
+
 ```cpp
 // ejemplo: A+B
 #include <bits/stdc++.h>
@@ -51,6 +56,7 @@ int main() {
 ```
 
 Plantilla básica para competiciones
+
 ```cpp
 // plantilla-clase: helper de I/O y ejemplo práctico
 #include <bits/stdc++.h>
@@ -65,7 +71,7 @@ struct CP {
     void printLn(long long x) { cout << x << '\n'; }
     void printLn(const string &s) { cout << s << '\n'; }
 };
- 
+
 // Ejemplo: resolver A+B con múltiples casos usando la clase
 struct ExampleSolver {
     CP io;
@@ -88,11 +94,13 @@ int main() {
 ```
 
 Ejercicios propuestos (para la práctica de la sesión)
+
 - Escribir y ejecutar el programa Hello World.
 - Resolver A+B con enteros pequeños.
 - Modificar A+B para leer hasta EOF (múltiples líneas con pares de enteros).
 - Revisar la plantilla y comentar cada línea.
 
 Notas
+
 - Reforzar el hábito de probar con casos borde y ejemplos.
 - Recordar límites de tipos (usar long long cuando haya posibilidad de overflow).

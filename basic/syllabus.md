@@ -90,33 +90,20 @@
 - Backtracking básico
 - Cuándo usar recursión vs iteración
 
-## Sesión 11: Optimización de Entrada/Salida (2h)
-
-- `ios_base::sync_with_stdio(false)`
-- `cin.tie(NULL)`
-- Lectura hasta EOF
-- Formateo de salida
-- Lectura de múltiples casos de prueba
-- Manejo de archivos (opcional)
-
-## Sesión 12: Vector - Parte 1 (2h)
+## Sesión 12: Vectores (completo) (2h)
 
 - `vector<T>` vs arreglos estáticos
 - Declaración e inicialización
 - Operaciones: `push_back`, `pop_back`, `size`, `clear`
 - Acceso a elementos
 - Iteración sobre vectores
-- Problemas básicos con vectores
-
-## Sesión 13: Vector - Parte 2 (2h)
-
 - Vectores 2D
 - Operaciones avanzadas: `insert`, `erase`, `resize`
 - `vector<bool>` y sus peculiaridades
 - Iteradores básicos
-- Problemas intermedios con vectores
+- Problemas básicos e intermedios con vectores
 
-## Sesión 14: Ordenamiento (2h)
+## Sesión 13: Ordenamiento (2h)
 
 - `sort()` de la STL
 - Ordenamiento ascendente y descendente
@@ -125,14 +112,14 @@
 - `stable_sort()`
 - Problemas que requieren ordenamiento
 
-## Sesión 15: Pair y Tuple (2h)
+## Sesión 15: Complejidad Algorítmica (2h)
 
-- `pair<T1, T2>` y casos de uso
-- `make_pair` y construcción
-- Acceso con `.first` y `.second`
-- Ordenamiento de pairs
-- `tuple` para más de 2 elementos
-- Problemas usando pairs
+- Notación Big O
+- Complejidades comunes: O(1), O(log n), O(n), O(n log n), O(n²)
+- Cómo calcular complejidad
+- Estimar si una solución pasa los límites de tiempo
+- Análisis de casos peor, mejor y promedio
+- Ejercicios de análisis
 
 ## Sesión 16: Búsqueda Lineal y Binaria (2h)
 
@@ -234,7 +221,7 @@
 
 ## Sesión 27: Números Primos (2h)
 
-- Verificar si un número es primo (O(√n))
+- Verificar si un número es primo (O(raiz n))
 - Criba de Eratóstenes
 - Factorización prima
 - Divisores de un número
