@@ -1,0 +1,173 @@
+\documentclass{beamer}
+\usetheme{Madrid}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily\small,breaklines=true}
+
+	itle{Sesión 1 — Introducción a la programación competitiva}
+\author{Curso: Handbook de Programación Competitiva}
+\institute{Grupo de Estudio}
+\date{Sesión 1}
+
+\begin{document}
+
+\begin{frame}
+		itlepage
+\end{frame}
+
+\begin{frame}{Objetivos de la sesión}
+	\begin{itemize}
+		\item Entender qué es la programación competitiva y su enfoque.
+		\item Aprender el flujo básico para resolver problemas: leer, diseñar, implementar y probar.
+		\item Conocer técnicas y buenas prácticas iniciales.
+		\item Resolver ejemplos guiados y una actividad práctica.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Agenda}
+	\begin{enumerate}
+		\item ¿Qué es programación competitiva? Enfoque y motivación.
+		\item Flujo de resolución de problemas.
+		\item Conceptos y herramientas básicas.
+		\item Ejemplos resueltos paso a paso.
+		\item Actividad práctica y retos para casa.
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{¿Qué es programación competitiva?}
+	\begin{itemize}
+		\item Resolver problemas algorítmicos en tiempo limitado (concursos, prácticas).
+		\item Enfasis en: análisis, diseño algorítmico y eficiencia (tiempo/memoria).
+		\item No solo codificar: leer los enunciados y entender restricciones es vital.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Flujo básico para resolver un problema}
+	\begin{enumerate}
+		\item Leer el enunciado y ejemplos.
+		\item Identificar entradas, salidas y restricciones.
+		\item Pensar en casos pequeños y ejemplos propios.
+		\item Diseñar una solución (pseudocódigo).
+		\item Analizar complejidad temporal y espacial.
+		\item Implementar, probar con casos y depurar.
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{Buenas prácticas iniciales}
+	\begin{itemize}
+		\item Siempre leer las restricciones: n, límites de tiempo y memoria.
+		\item Empezar con soluciones correctas; optimizar después si hace falta.
+		\item Usar nombres claros y probar con ejemplos sencillos primero.
+		\item Escribir y verificar casos borde (vacío, mínimo, máximo).
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Conceptos básicos (rápido)}
+	\begin{itemize}
+		\item Complejidad: $O(1), O(\log n), O(n), O(n \log n), O(n^2)$.
+		\item Estructuras comunes: arreglos, vectores, conjuntos, mapas, pilas, colas.
+		\item Técnicas: ordenación, búsqueda lineal/binaria, recorridos simples.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Ejemplo 1 — Máximo de un arreglo}
+		extbf{Enunciado:} Dado un arreglo de $n$ enteros, encontrar el valor máximo y su posición (índice).
+
+		extbf{Idea:} Recorrer el arreglo una vez, mantener el máximo y su índice.
+
+		extbf{Pseudocódigo:}
+	\begin{lstlisting}
+	max = -inf
+	idx = -1
+	for i = 0 to n-1:
+			if a[i] > max:
+					max = a[i]
+					idx = i
+	print(max, idx)
+	\end{lstlisting}
+
+		extbf{Complejidad:} Tiempo $O(n)$, Espacio $O(1)$.
+\end{frame}
+
+\begin{frame}{Ejemplo 1 — Casos de prueba}
+	\begin{itemize}
+		\item Entrada: [3, 1, 4, 2] → Salida: 4, índice 2 (si índices 0-based).
+		\item Todos iguales: [2,2,2] → Salida: 2, índice 0 (primer máximo).
+		\item Negativos: [-5, -2, -7] → Salida: -2, índice 1.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Ejemplo 2 — Buscar si existe un par que sume S}
+		extbf{Enunciado:} Dado arreglo $a$ y entero $S$, decidir si existen dos elementos cuya suma sea $S$.
+
+		extbf{Solución simple:} Fuerza bruta $O(n^2)$ (probar todos los pares).
+
+		extbf{Solución óptima (conjunto):}
+	\begin{lstlisting}
+	seen = empty set
+	for x in a:
+			if S - x in seen:
+					return true
+			add x to seen
+	return false
+	\end{lstlisting}
+
+		extbf{Complejidad:} Tiempo $O(n)$ promedio, Espacio $O(n)$.
+\end{frame}
+
+\begin{frame}{Explicación del ejemplo 2}
+	\begin{itemize}
+		\item Mantener un conjunto de valores ya vistos permite comprobar en $O(1)$ si el complemento existe.
+		\item Importante: manejar duplicados y tipos (enteros grandes).
+		\item Si la memoria es crítica, se puede ordenar y usar dos punteros: $O(n \log n)$.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Actividad práctica (20 min)}
+		extbf{Problema:} Dado un entero $n$ y $n$ enteros, calcular cuántos elementos son pares.
+
+		extbf{Requisitos:}
+	\begin{itemize}
+		\item Diseña la solución en pseudocódigo.
+		\item Implementa y prueba con los ejemplos.
+	\end{itemize}
+
+		extbf{Ejemplo:}
+	\begin{itemize}
+		\item Entrada: n=5, [1,2,3,4,6] → Salida: 3 (2,4,6)
+		\item Complejidad esperada: $O(n)$.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Consejos para la actividad}
+	\begin{itemize}
+		\item Probar con arrays vacíos y de tamaño 1.
+		\item Comprobar tanto índices 0-based como 1-based según el enunciado.
+		\item Añadir prints intermedios al depurar si la solución falla.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Recursos y lecturas recomendadas}
+	\begin{itemize}
+		\item Judges: Codeforces, Kattis, AtCoder.
+		\item Libros: "Competitive Programming" (Halim), CP-algorithms (online).
+		\item Hojas de trucos: complejidad, estructuras de datos básicas.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Tareas para la próxima sesión}
+	\begin{itemize}
+		\item Resolver 3 problemas sencillos en un judge (max/min, conteo, búsqueda de pares).
+		\item Revisar soluciones y comparar enfoques.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Preguntas}
+	\centering ¿Dudas o comentarios sobre las ideas vistas?
+\end{frame}
+
+\end{document}
+
