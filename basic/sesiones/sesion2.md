@@ -1,4 +1,3 @@
-````markdown
 # Sesión 2: Condicionales — `if`, `else if`, `else` (2h)
 
 Docente: Gustavo Orosco Zavala
@@ -224,4 +223,4 @@ cout << (x % 2 == 0 ? "PAR\n" : "IMPAR\n");
 - Par/Impar: `4` → `PAR`, `7` → `IMPAR`
 - Máximo: `3 5 5` → `5`
 - Año bisiesto: `2000` → `Bisiesto`, `1900` → `No bisiesto`, `2012` → `Bisiesto`
-````
+
